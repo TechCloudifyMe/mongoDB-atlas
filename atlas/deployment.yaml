@@ -1,10 +1,10 @@
 apiVersion: atlas.mongodb.com/v1
 kind: AtlasDeployment
 metadata:
-  name: mern-k8s-cluster
+  name: mongo-k8s-cluster
 spec:
   projectRef:
-    name: mern-k8s-project
+    name: mongo-k8s-project
   deploymentSpec:
     name: Cluster0
     providerSettings:
