@@ -5,10 +5,10 @@ metadata:
 spec:
   roles:
     - roleName: "readWriteAnyDatabase"
-      databaseName: "admin"
+      databaseName: "mydb"
   projectRef:
-    name: mern-k8s-project
-  username: mernk8s
+    name: mongo-k8s-project
+  username: k8user
   passwordSecretRef:
     name: atlaspassword
 
