@@ -1,10 +1,15 @@
 apiVersion: atlas.mongodb.com/v1
 kind: AtlasProject
 metadata:
-  name: mongo-k8s-project
+  name: my-project
 spec:
-  name: "Mongo K8s"
+  name: Test Atlas Operator Project
   projectIpAccessList:
-    - ipAddress: "0.0.0.0/0"
-      comment: "Allowing access to database from everywhere (only for Demo!)"
-
+    - ipAddress: "192.168.10.32"
+      comment: "IP address for Node 1 in EKS cluster"
+    - ipAddress: "192.168.54.105 "
+      comment: "IP address for Node 2 in EKS cluster"
+    - cidrBlock: "10.100.106.11/32"
+      comment: "CIDR block for Frontend Service"
+    - cidrBlock: "10.100.203.166/32"
+      comment: "CIDR block for Backend Service"

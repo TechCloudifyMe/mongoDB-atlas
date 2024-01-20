@@ -1,15 +1,13 @@
 apiVersion: atlas.mongodb.com/v1
 kind: AtlasDeployment
 metadata:
-  name: mongo-k8s-cluster
+  name: my-atlas-deployment
 spec:
   projectRef:
-    name: mongo-k8s-project
+    name: my-project
   deploymentSpec:
-    name: Cluster0
+    name: test-deployment
     providerSettings:
-      instanceSizeName: M0
-      providerName: TENANT
+      instanceSizeName: M10
+      providerName: AWS
       regionName: US_EAST_1
-      backingProviderName: AWS
-
