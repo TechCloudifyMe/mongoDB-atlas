@@ -80,7 +80,7 @@ spec:
             - name: MONGO_PASSWORD
               value: K8password  
             - name: BASE_URL
-              value: "http://mongo-k8s-back:3000"
+              value: mongo-k8s-back
             - name: MONGO_DATABASE
               value: mern-k8s
 ---
