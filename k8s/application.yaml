@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mern-k8s-back
+  name: mongo-k8s-back
   labels:
-    app: mern-k8s
+    app: mongo-k8s
     component: back
 spec:
   replicas: 2
@@ -13,11 +13,11 @@ spec:
   template:
     metadata: 
       labels:
-        app: mern-k8s
+        app: mongo-k8s
         component: back
     spec:
       containers:
-        - name: mern-k8s-back
+        - name: mongo-k8s-back
           image: techcloudifyme/mongodb-back
           ports: 
             - containerPort: 3000
@@ -30,9 +30,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mern-k8s-back
+  name: mongo-k8s-back
   labels:
-    app: mern-k8s
+    app: mongo-k8s
     component: back
 spec:
   type: LoadBalancer
@@ -47,9 +47,9 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mern-k8s-front
+  name: mongo-k8s-front
   labels:
-    app: mern-k8s
+    app: mongo-k8s
     component: front
 spec:
   replicas: 2
@@ -59,11 +59,11 @@ spec:
   template:
     metadata: 
       labels:
-        app: mern-k8s
+        app: mongo-k8s
         component: front
     spec:
       containers:
-        - name: mern-k8s-front
+        - name: mongo-k8s-front
           image: techcloudifyme/mongodb-front
           ports: 
             - containerPort: 80
@@ -74,9 +74,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mern-k8s-front
+  name: mongo-k8s-front
   labels:
-    app: mern-k8s
+    app: mongo-k8s
     component: front
 spec:
   type: LoadBalancer
